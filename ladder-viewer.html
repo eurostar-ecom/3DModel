@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ladder 3D Viewer</title>
+  <title>Ladder Viewer</title>
   <style>
     body { margin: 0; overflow: hidden; }
     canvas { display: block; }
@@ -34,6 +34,7 @@
     light2.position.set(1, 1, 1);
     scene.add(light1, light2);
 
+    // ✅✅ FIX IS HERE: use `new OBJLoader()` not `new THREE.OBJLoader()`
     const loader = new OBJLoader();
     loader.load(
       'https://cdn.jsdelivr.net/gh/eurostar-ecom/3DModel@main/ladder_model.obj',
